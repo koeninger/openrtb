@@ -103,8 +103,8 @@ public class OpenRtbNativeJsonReader extends AbstractOpenRtbJsonReader {
             readNativeRequestField(par, req, fieldName);
           }
         }
-      } else {
-        par.skipChildren();
+      } else if (par.getCurrentToken() != JsonToken.VALUE_NULL) {
+        readNativeRequestField(par, req, fieldName);
       }
     }
     return req;
