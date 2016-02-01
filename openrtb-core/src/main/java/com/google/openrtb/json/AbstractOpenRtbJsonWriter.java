@@ -48,7 +48,7 @@ public class AbstractOpenRtbJsonWriter {
    * @throws IOException any serialization error
    */
   @SuppressWarnings("unchecked")
-  protected final <EM extends ExtendableMessage<EM>>
+  public final <EM extends ExtendableMessage<EM>>
   void writeExtensions(EM msg, JsonGenerator gen) throws IOException {
     boolean openExt = false;
 

@@ -89,7 +89,7 @@ public class OpenRtbNativeJsonWriter extends AbstractOpenRtbJsonWriter {
     gen.flush();
   }
 
-  protected void writeNativeRequestFields(NativeRequest req, JsonGenerator gen) throws IOException {
+  public void writeNativeRequestFields(NativeRequest req, JsonGenerator gen) throws IOException {
     if (req.hasVer()) {
       gen.writeStringField("ver", req.getVer());
     }
